@@ -1,0 +1,174 @@
+/**
+ * #.# Common SCSS
+ *
+ * Can include things like variables and mixins
+ * that are used across the project.
+*/
+/**
+ * #.# Styles
+ *
+ * CSS for both Frontend+Backend.
+ */
+ * {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  min-height: 4000px;
+}
+.Border {
+  border: 0px;
+  border-radius: 5%;
+}
+.Container,
+.Card__Container {
+  position: relative;
+  color: white;
+  padding: 1rem 0;
+  margin: 6rem auto 6rem auto;
+  width: 80%;
+  max-width: 1444px;
+}
+.Card__Container {
+  display: flex;
+  flex-direction: column;
+}
+
+.Container__Gradient {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.Container__Gradient::before {
+  z-index: -1;
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 50%;
+  background: linear-gradient(180deg, #CECECE 0%, rgba(206, 206, 206, 0) 100.06%);
+  content: ""
+}
+.Container__Gradient::after {
+  z-index:-1;
+  position: absolute;
+  top: 50%; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(0deg, #CECECE 0%, rgba(206, 206, 206, 0) 100.06%);
+  content: ""
+}
+.Card {
+  background-color: blue;
+  width: 12rem;
+  height: 24rem;
+  margin: 4rem 0 6rem 0;
+  transform: scale(0.7);
+  transition: all 0.1s;
+  background-color: rgba(41, 74, 138, 0.85);
+}
+.Card__main {
+  transform: scale(1);
+}
+.Card__middle {
+  position: relative;
+  height: 40%;
+  background-color: rgba(41, 74, 138);
+}
+.Card__top,
+.Card__bottom {
+  position: relative;
+  height: 30%;
+}
+
+
+.sq {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 8rem;
+  height: 8rem;
+  background-color: black;
+}
+.sq-t {
+  background-color: rgba(41, 74, 138);
+  top: -4rem;
+  left: 8vw;
+}
+.sq-b {
+  background-color: #B7162B;
+  bottom: -4rem;
+  right: 8vw;
+}
+
+@media (max-width: 720px) {
+  .Container {
+    width: 100%;
+  }
+  .Card {
+    display: none;
+  }
+  .Card__main {
+    display: block;
+  }
+}
+.Card__top__title {
+ padding: 1rem 1rem 0 1rem;
+ font-size: 1.5em;
+}
+.Card__top__text {
+ padding: 1rem 1rem 0 1rem;
+}
+.Card__middle__contnet {
+  padding: 1rem;
+}
+.Card__bottom__text {
+ padding: 1rem 1rem 0 1rem;
+}
+.ar-t {
+  position: absolute;
+  top: 1em; right: 8vw;
+  transform: rotate(180deg)
+}
+.ar-b {
+  position: absolute;
+  bottom: 1em; left: 8vw;
+}
+.ar-t img,
+.ar-b img {
+  width: 6rem;
+}
+.ar-m {
+  position: absolute;
+  background-color: rgba(41, 74, 138);
+  bottom: 6em;
+  right: 0; left: 0;
+  height: 2em;
+  width: 10em;
+  margin: 0 auto;
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+.ar-m__dot {
+  background-color: #CECECE;
+  width: 1em;
+  height: 1em;
+  border: 0px;
+  border-radius: 50%;
+}
+.ar-m__dot__main {
+  background-color: #B7162B;
+}
+@media (max-width: 720px) {
+  .ar-b,
+  .ar-t {
+    display: none;
+  }
+  .ar-m {
+    display: flex;
+  }
+}
+.edit {
+  display: none;
+}
+.squareTitleEdit {
+  display: none;
+}

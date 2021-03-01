@@ -1,0 +1,73 @@
+/**
+ * #.# Common SCSS
+ *
+ * Can include things like variables and mixins
+ * that are used across the project.
+*/
+/**
+ * #.# Editor Styles
+ *
+ * CSS for just Backend enqueued after style.scss
+ * which makes it higher in priority.
+ */
+.wp-block-cgb-block-my-block {
+  background: #bada55;
+  border: 0.2rem solid #292929;
+  color: #292929;
+  margin: 0 auto;
+  max-width: 740px;
+  padding: 2rem; 
+}
+.Container,
+.Card__Container {
+  position: relative;
+  color: white;
+  padding: 1rem 0;
+  margin: 6rem auto 6rem auto;
+  width: 100%;
+  max-width: 1444px;
+}
+.Card__Container {
+  display: flex;
+  flex-direction: column;
+}
+.Container__Gradient {
+  background-color: #CECECE;
+}
+.ar-b,
+.sq-t {
+  left: 8%;
+}
+.ar-t,
+.sq-b {
+  right: 8%;
+}
+.edited {
+  outline: 1px solid red;
+  display: flex;
+}
+
+.edit {
+  display: block;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 1rem;
+  height: 1rem;
+  background: red;
+  border: 0px;
+  border-radius: 50%;
+}
+.edited .edit {
+  background-color: green !important;
+}
+.edited .squareTitleEditView {
+  display: none;
+}
+.squareTitleEdit {
+  display: none;
+}
+.edited .squareTitleEdit {
+  width: 100%;
+  display: block;
+}
